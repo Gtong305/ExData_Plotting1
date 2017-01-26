@@ -11,7 +11,7 @@ raw_data$datetime <- dmy_hms(raw_data$datetime) ## convert to datetime format
 
 clean_data <- raw_data[grepl("2007-02-01|2007-02-02", raw_data$datetime),]
 
-png(filename = "plot3.png", units = "px", width = 480, height = 480, bg = "white")
+png(filename = "plot3.png")
 
 with(clean_data, plot(datetime, Sub_metering_1, type = "l", ylab = "Energy sub metering", xlab = ""))
 with(clean_data, points(datetime, Sub_metering_2, type = "l", col = "red"))
